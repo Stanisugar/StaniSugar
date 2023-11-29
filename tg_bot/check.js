@@ -22,6 +22,12 @@ function getValues(event){
     vis.focus();
     return;
   }
+    if (values['Pour_point'].replace(/,/, ".") > 20 || values['Pour_point'].replace(/,/, ".") < -50) {
+    alert("Введите значение вязкости от -50,0 до 20,0 oC");
+    let vis = document.getElementById("Pour_point");
+    vis.focus();
+    return;
+  }
   if (values['Asphaltene'].replace(/,/, ".") > 10 || values['Asphaltene'].replace(/,/, ".") < 0) {
     alert("Введите содержание асфальтенов от 0,1 до 10,0 масс. %");
     let asph = document.getElementById("Asphaltene");
