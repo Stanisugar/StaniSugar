@@ -23,7 +23,7 @@ function getValues(event){
     return;
   }
     if (values['Pour_point'].replace(/,/, ".") > 20 || values['Pour_point'].replace(/,/, ".") < -50) {
-    alert("Введите значение вязкости от -50,0 до 20,0 oC");
+    alert("Введите значение температуры заставания от -50,0 до 20,0 oC");
     let vis = document.getElementById("Pour_point");
     vis.focus();
     return;
